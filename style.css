@@ -633,3 +633,58 @@ h1 {
 .course-more__cta:hover { background: #205c4c; }
 .contact-link { text-decoration: underline; text-underline-offset: 3px; color: var(--gold-soft); }
 @media (prefers-reduced-motion: reduce) { .course-more summary span { transition: none; } }
+
+/* v5.1: consistently prominent WhatsApp CTA on small screens */
+@media (max-width: 650px) {
+  .courses .course-card .course-more__body > a.course-more__cta,
+  .courses .course-card .course-more__body > a.course-more__cta:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid #103d34;
+    border-radius: 4px;
+    background-color: #103d34;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(16, 61, 52, 0.13);
+  }
+  .courses .course-card .course-more__body > a.course-more__cta:hover,
+  .courses .course-card .course-more__body > a.course-more__cta:focus-visible {
+    background-color: #205c4c;
+    color: #ffffff;
+  }
+}
+
+/* v6 — рассказ о школе и наставнике */
+.about-school{background:var(--milk);color:var(--graphite);padding:clamp(4rem,8vw,8rem) 1.5rem}
+.about-school__inner{max-width:1180px;margin:auto}
+.about-school__intro{max-width:790px;margin-bottom:3.5rem}
+.about-school__eyebrow{color:#7c693e;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:600;margin:0 0 1rem}
+.about-school h2,.about-school h3{font-family:var(--font-serif);font-weight:500;letter-spacing:-.018em}
+.about-school h2{font-size:clamp(2.8rem,5vw,5rem);line-height:1.04;margin:0 0 1.5rem}
+.about-school__intro>p:not(.about-school__eyebrow){color:#4f5a56;line-height:1.8;font-size:1.05rem;max-width:680px}
+.about-school__cta{display:inline-block;margin-top:1.2rem;padding:1rem 1.4rem;background:var(--emerald);color:white;font-weight:500;font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;transition:background .2s ease,transform .2s ease}
+.about-school__cta:hover{background:#20584a;transform:translateY(-2px)}
+.about-school__cta:focus-visible{outline:3px solid #b49a68;outline-offset:3px}
+.about-school__person{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.about-school__photo{aspect-ratio:4/4.5;overflow:hidden;background:#dbd6cd}
+.about-school__photo img{height:100%;width:100%;object-fit:cover;object-position:center 15%}
+.about-school h3{font-size:clamp(2.4rem,4.4vw,4rem);line-height:1.1;margin:.4rem 0 1.1rem;color:var(--emerald)}
+.about-school__bio>p:not(.about-school__eyebrow){color:#4f5a56;line-height:1.8;font-size:1rem}
+.about-school__tags{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:1.5rem 0 0;list-style:none}
+.about-school__tags li{border:1px solid #c8ba9f;color:#525b51;padding:.65rem .8rem;font-size:.78rem}
+.about-school__facts{margin-top:3.6rem;padding:2rem 0;border-top:1px solid #d8d0c2;border-bottom:1px solid #d8d0c2;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.about-school__facts>div{display:grid;gap:.5rem}
+.about-school__facts strong{font-family:var(--font-serif);font-size:clamp(2.4rem,4vw,3.6rem);line-height:1;color:var(--emerald);font-weight:500}
+.about-school__facts span{font-size:.88rem;line-height:1.5;color:#59635e}
+.about-school__disclaimer{font-size:.76rem;line-height:1.6;color:#707670;margin-top:1.25rem}
+@media(max-width:760px){.about-school__person{grid-template-columns:1fr}.about-school__photo{max-width:480px;width:100%;aspect-ratio:4/4}.about-school__facts{grid-template-columns:1fr 1fr}.about-school__intro{margin-bottom:2.2rem}}
+@media(max-width:460px){.about-school{padding:3.5rem 1.1rem}.about-school__facts{grid-template-columns:1fr}.about-school__cta{display:block;text-align:center}.about-school__photo{aspect-ratio:4/4.6}}
