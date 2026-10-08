@@ -617,3 +617,19 @@ h1 {
 .courses__disclaimer { color: #596a60; font-size: .75rem; line-height: 1.5; margin: 1.75rem 0 0; }
 @media (max-width: 1050px) { .courses__head { flex-direction: column; align-items: start; } .courses__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 650px) { .courses { padding: 3.5rem 1.1rem; } .courses__grid { grid-template-columns: 1fr; } .courses__filters { width: 100%; } .courses__filter { flex: 1; } }
+
+/* v5: course descriptions and WhatsApp actions */
+.course-more { margin-top: auto; border-top: 1px solid #bac5b8; }
+.course-more summary { display: flex; justify-content: space-between; gap: .8rem; align-items: center; padding: 1rem 0; cursor: pointer; font-size: .78rem; text-transform: uppercase; font-weight: 600; letter-spacing: .075em; list-style: none; }
+.course-more summary::-webkit-details-marker { display: none; }
+.course-more summary:hover, .course-more summary:focus-visible { color: #8b652b; }
+.course-more summary:focus-visible, .course-more__cta:focus-visible, .contact-link:focus-visible { outline: 3px solid #b99554; outline-offset: 3px; }
+.course-more[open] summary span { transform: rotate(45deg); }
+.course-more summary span { font-size: 1.2rem; transition: transform .2s; }
+.course-more__body { padding: .15rem 0 .25rem; }
+.course-more__title { font-weight: 600; color: #163c32 !important; margin: .4rem 0 !important; }
+.course-more__list { margin: .5rem 0 1.15rem !important; }
+.course-more__cta { display: block; padding: .95rem .7rem; text-align: center; background: #103d34; color: #fffefa; font-weight: 600; font-size: .8rem; line-height: 1.4; transition: background .2s; }
+.course-more__cta:hover { background: #205c4c; }
+.contact-link { text-decoration: underline; text-underline-offset: 3px; color: var(--gold-soft); }
+@media (prefers-reduced-motion: reduce) { .course-more summary span { transition: none; } }
