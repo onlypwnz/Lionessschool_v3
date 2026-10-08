@@ -47,3 +47,22 @@
   window.addEventListener("scroll", setScrolled, { passive: true });
   setScrolled();
 })();
+
+// Фильтр образовательных программ; работает без сетевых запросов.
+(function () {
+  const buttons = document.querySelectorAll('[data-course-filter]');
+  const cards = document.querySelectorAll('[data-course-category]');
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const selected = button.dataset.courseFilter;
+      buttons.forEach((b) => {
+        const active = b === button;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+      cards.forEach((card) => {
+        card.hidden = selected !== 'all' && card.dataset.courseCategory !== selected;
+      });
+    });
+  });
+})();
